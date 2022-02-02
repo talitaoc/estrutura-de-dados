@@ -89,17 +89,15 @@ public class Exercicio06 {
 		
 		try {
 			contato = lista.busca(posicao);
-			lista.remove(posicao);
+			lista.remove(contato);
 			System.out.println("Contato excluído.");	
 		}catch(Exception e) {
 			System.out.println("Posição inválida.");
 		}
 		
 	}
-
 	private static void excluirPosicao(Scanner scan, Lista<Contato> lista) {
-		
-		Contato contato;
+
 		int posicao = leInformacaoInt("Entre com a posição a ser excluida: ", scan);
 		
 		try {
@@ -110,7 +108,6 @@ public class Exercicio06 {
 		}
 		
 	}
-	
 	private static void pesquisarContatoExiste(Scanner scan, Lista<Contato> lista) {
 		
 		Contato contato;
@@ -150,7 +147,6 @@ public class Exercicio06 {
 		}
 		
 	}
-	
 	private static void obtemContato(Scanner scan, Lista<Contato> lista) {
 		
 		Contato contato;
@@ -170,7 +166,6 @@ public class Exercicio06 {
 		}
 		
 	}
-	
 	private static void obtemContatoPosicao(Scanner scan, Lista<Contato> lista) {
 		
 		Contato contato;
@@ -186,7 +181,6 @@ public class Exercicio06 {
 		}
 		
 	}
-	
 	private static void adicionarContatoFinal(Scanner scan, Lista<Contato> lista) {
 		System.out.println("Criando um contato");
 		System.out.println("Entre com as informações: ");
@@ -219,15 +213,13 @@ public class Exercicio06 {
 			System.out.println("Posição inválida. Contato não adicionado.");
 		}
 	}
-
-	
-	private static String leInformacao(String mensagem, Scanner scan) {
+	protected static String leInformacao(String mensagem, Scanner scan) {
 		System.out.println(mensagem);
 		String entrada = scan.nextLine();
 		
 		return entrada;
 	}
-	private static int leInformacaoInt(String mensagem, Scanner scan) {
+	protected static int leInformacaoInt(String mensagem, Scanner scan) {
 		
 		boolean entradaValida = false;
 		String entrada;
@@ -249,8 +241,7 @@ public class Exercicio06 {
 		}
 		return numero;
 	}
-	
-	private static int Menu(Scanner scan) {
+	protected static int Menu(Scanner scan) {
 		
 		boolean entradaValida = false;
 		int opcao = 0;
@@ -287,8 +278,7 @@ public class Exercicio06 {
 		}
 		return opcao;
 	}
-	
-	private static void criarContatoDinamicamente(int capacidade, Lista<Contato> lista) {
+	protected static void criarContatoDinamicamente(int capacidade, Lista<Contato> lista) {
 		
 		Contato contato;
 		for (int i = 1; i < capacidade; i++) {
@@ -300,5 +290,4 @@ public class Exercicio06 {
 		}
 		
 	}
-
 }
